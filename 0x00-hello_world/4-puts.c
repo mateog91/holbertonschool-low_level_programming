@@ -1,4 +1,8 @@
 #include <stdio.h>
+/**
+ * main - Print text
+ * Return: 0
+ */
 
 int main(void)
 {
