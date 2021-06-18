@@ -1,7 +1,10 @@
-#include<stdio.h>
 #include <stdlib.h>
+#include <time.h>
+#include <stdio.h>
+/* more headers goes there */
+/* betty style doc for function main goes there */
 /**
- * main - Identify if the numer is cero, positive or negative
+ * main - Identify if the number is cero, positive or negative
  * Return: 0
  */
 int main(void)
