@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include <stdlib.h>
 /**
  * main - Identify if the numer is cero, positive or negative
  * Return: 0
@@ -13,15 +14,15 @@ int main(void)
 	/* compares if n is greater, less or cero */
 	if (n > 0)
 	{
-		printf("%lu is positive\n");
+		printf("%d is positive\n", n);
 	}
 	else if (n < 0)
 	{
-		printf("%lu is negative\n");
+		printf("%d is negative\n", n);
 	}
 	else
 	{
-		printf("%lu is zero\n");
+		printf("%d is zero\n", n);
 	}
 	return (0);
 }
