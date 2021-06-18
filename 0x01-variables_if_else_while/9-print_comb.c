@@ -25,8 +25,12 @@ int main(void)
 	while (i <= last)
 	{
 		putchar(i);
-		putchar(44);
-		putchar(32);
+		/* Do not print if it is last*/
+		if (i < last)
+		{
+			putchar(44);
+			putchar(32);
+		}
 		i++;
 	}
 	/* Print new line */
