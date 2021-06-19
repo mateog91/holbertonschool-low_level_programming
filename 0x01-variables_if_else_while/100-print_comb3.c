@@ -20,26 +20,30 @@ int main(void)
 	last = 57;
 	i = first;
 	j = i;
-	/*
-	 * Goes from first to last printing the current value
-	 * and restarts +1 when reaching last number
-	 */
 	while (j <= last)
 	{
 		while (i <= last)
-		{	
-			putchar(j);
-			putchar(i);
-			printf (", "); /*MUST BE REMOVED*/
-			i++;
-			/* Restart variables +1 */
-			if (i > last)
+		{
+			/* print only if i and j are different */
+			if (i != j)
 			{
-				first++;
-				i = first;
-				printf ("\n");/*MUST BE REMOVED*/
+				putchar(j);
+				putchar(i);
+				/*check if it would be the las print*/
+				if (i == j + 1 && j + 1 == last)
+				{
+				}
+				else
+				{
+					putchar(44);
+					putchar(32);
+				}
 			}
+			i++;
 		}
+		/* Restart variables +1 */
+		first++;
+		i = first;
 		/* Add +1 to counter j*/
 		j++;
 	}
