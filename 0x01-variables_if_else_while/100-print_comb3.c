@@ -1,5 +1,4 @@
 #include <stdlib.h>
-#include <time.h>
 #include <stdio.h>
 /* more headers goes there */
 /* betty style doc for function main goes there */
@@ -9,13 +8,11 @@
  */
 int main(void)
 {
-	/* Variables Declaration */
 	int first;
 	int last;
 	int i;
 	int j;
 
-	/* Variables Initialization */
 	first = 48;
 	last = 57;
 	i = first;
@@ -24,12 +21,10 @@ int main(void)
 	{
 		while (i <= last)
 		{
-			/* print only if i and j are different */
 			if (i != j)
 			{
 				putchar(j);
 				putchar(i);
-				/*check if it would be the las print*/
 				if (i == j + 1 && j + 1 == last)
 				{
 				}
@@ -41,7 +36,6 @@ int main(void)
 			}
 			i++;
 		}
-		/* Restart variables +1 */
 		first++;
 		i = first;
 		/* Add +1 to counter j*/
