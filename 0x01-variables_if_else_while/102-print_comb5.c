@@ -42,6 +42,7 @@ int main(void)
 		}
 		num1++;
 		num2 = 48;
+		num4 = num2 + 1;
 	}
 	putchar('\n');
 	return (0);
