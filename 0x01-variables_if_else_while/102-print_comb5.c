@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	char num1 = 48, num2 = 48, num3 = num1, num4 = num2 + 1, last = 57;
+	int num1 = 48, num2 = 48, num3 = num1, num4 = num2 + 1, last = 57;
 
 	while (num1 <= last) /* most exterior k goes from 0 to 9 */
 	{
