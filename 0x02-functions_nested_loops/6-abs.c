@@ -1,9 +1,10 @@
 #include "holberton.h"
 
 /**
- * print_sign - computes absolute value of an interger
+ * _abs - computes absolute value of an interger
  * @n: input interger
  *
+ * Description: Returns the absolute value of the input interger
  * Return: n as a positive interger
  */
 int _abs(int n)
