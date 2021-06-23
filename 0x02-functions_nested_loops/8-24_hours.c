@@ -3,7 +3,7 @@
 /**
  * jack_bauer - prints every minute of day
  */
-void jack_bauer(void);
+void jack_bauer(void)
 {
 	int hh = 0, mm = 0;
 
