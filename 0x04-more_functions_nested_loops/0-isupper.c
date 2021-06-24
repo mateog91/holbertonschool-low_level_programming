@@ -7,9 +7,7 @@
 
 int _isupper(int c)
 {
-	int first = 65, last = 90;
-
-	if (c >= first && c <= last)
+	if (c >= 65 && c <= 90)
 		return (1);
 	else
 		return (0);
