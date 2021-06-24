@@ -11,5 +11,5 @@ int _isupper(int c)
 	if (c >= first && c <= last)
 		return (1);
 	else
-		return (0)
+		return (0);
 }
