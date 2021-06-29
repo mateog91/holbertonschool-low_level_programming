@@ -2,7 +2,7 @@
 
 /**
  * _puts - prints a string followed by a new line
- * @*str: - pointer to first character of string
+ * @str: - pointer to first character of string
  *
  */
 
