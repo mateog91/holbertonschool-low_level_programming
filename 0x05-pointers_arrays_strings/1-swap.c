@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * swaps the values of two intergers
+ * swap_int - swaps the values of two intergers
  * @a: first interger
  * @b: second interger
  *
