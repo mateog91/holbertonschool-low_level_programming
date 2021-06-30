@@ -1,3 +1,4 @@
+#include <stdio.h>
 /**
  * _atoi - converts a string to an interger
  * @s: Input string to be converted to interger
@@ -6,7 +7,7 @@
  */
 int _atoi(char *s)
 {
-	int current, sign = 1, result = 0, flag = 0;
+	int current, sign = 1, result = 0, flag = 0, value;
 
 	for (current = 0; s[current]; current++)
 	{
@@ -15,8 +16,12 @@ int _atoi(char *s)
 
 		if (s[current] >= '0' && s[current] <= '9')
 		{
-			result = ((result * 10) + s[current] - '0');
+			value = s[current] - '0';
+			result = result * 10;
+			result = result + value;
+
 			flag = 1;
+			printf("%d\n", result);
 		}
 		else if (flag == 1)
 			break;
