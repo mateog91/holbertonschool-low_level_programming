@@ -14,7 +14,7 @@ void puts_half(char *str)
 	for (len = 0; str[len]; len++)
 	{
 	}
-	printf("valor de len: %d\n", len);
+	/*printf("valor de len: %d\n", len); */
 	/* len--; */
 	/* finds start of second half */
 	if ((len) % 2 != 0)
