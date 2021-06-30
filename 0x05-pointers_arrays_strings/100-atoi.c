@@ -1,4 +1,3 @@
-#include <stdio.h>
 /**
  * _atoi - converts a string to an interger
  * @s: Input string to be converted to interger
@@ -21,7 +20,6 @@ int _atoi(char *s)
 			result = result + value;
 
 			flag = 1;
-			printf("%d\n", result);
 		}
 		else if (flag == 1)
 			break;
