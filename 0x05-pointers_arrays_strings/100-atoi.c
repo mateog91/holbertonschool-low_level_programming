@@ -21,5 +21,8 @@ int _atoi(char *s)
 		else if (flag == 1)
 			break;
 	}
-	return (result * sign);
+	if (sign < 0)
+		result = result * (-1);
+
+	return (result);
 }
