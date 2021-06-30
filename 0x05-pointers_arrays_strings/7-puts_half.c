@@ -22,7 +22,7 @@ void puts_half(char *str)
 	else
 		n = len / 2;
 
-	printf("valor de n: %d\n", n);
+	/*printf("valor de n: %d\n", n);*/
 	/* prints string from n to the end */
 	for (; str[n]; n++)
 	{
