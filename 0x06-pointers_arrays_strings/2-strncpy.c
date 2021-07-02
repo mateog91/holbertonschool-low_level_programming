@@ -1,7 +1,7 @@
 /**
 * _strncpy -  function that copies a string.
 * @dest: Array where it will copy to.
-* @ src: Array where it will copy from.
+* @src: Array where it will copy from.
 * @n: number of chars to copy.
 *
 * Return: Pointer to dest array.
