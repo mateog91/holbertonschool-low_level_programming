@@ -27,20 +27,21 @@ char *_strncat(char *dest, char *src, int n)
 	while (1)
 	{
 		/* finished passing n, append null and break */
-		if (i > n)
+		if (i >= n)
 		{
 			dest[len_dest + i] = '\0';
 			break;
 		}
-
-		/* pass char of src to dest*/
-		dest[len_dest + i] = src[i];
 
 		/* find null char of src and stop*/
 		if (src[i] == '\0')
 		{
 			break;
 		}
+
+		/* pass char of src to dest*/
+		dest[len_dest + i] = src[i];
+
 		/* increase i */
 		i++;
 	}
