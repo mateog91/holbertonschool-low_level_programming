@@ -2,6 +2,7 @@
 * _strncpy -  function that copies a string.
 * @dest: Array where it will copy to.
 * @ src: Array where it will copy from.
+* @n: number of chars to copy.
 *
 * Return: Pointer to dest array.
 */
@@ -9,7 +10,7 @@ char *_strncpy(char *dest, char *src, int n)
 {
 	int i = 0;
 
-	while(i <= n)
+	while (i <= n)
 	{
 		dest[i] = src[i];
 		i++;
