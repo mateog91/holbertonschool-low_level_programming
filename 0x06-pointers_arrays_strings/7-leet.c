@@ -18,23 +18,23 @@
 
 char *leet(char *s)
 {
-	char four, three, cero, seven, one, c, nc;
-	int i;
+	char c;
+	int i, j;
+	char numbers[] = "43071";
+	char letters[] = "aAeEoOtTlL";
 
 	for (i = 0; s[i]; i++)
 	{
 		c = s[i];
 
-		four = ((c == 'a') + (c == 'A')) * '4';
-		three = ((c == 'e') + (c == 'E')) * '3';
-		cero = ((c == 'o') + (c == 'O')) * '0';
-		seven = ((c == 't') + (c == 'T')) * '7';
-		one = ((c == 'l') + (c == 'L')) * '1';
+		for (j = 0; letters[j]; j++)
+		{
+			if (c == letters[j])
+			{
+				s[i] = numbers[j / 2];
+			}
+		}
 
-		nc = four + three + cero + seven + one;
-
-		if (nc != 0)
-			s[i] = nc;
 	}
 
 	return (s);
