@@ -18,7 +18,7 @@ char *cap_string(char *s)
 		s[i] = s[i] - 32;
 
 	/* Goes through string starting at position 1 */
-	for (i = i; s[i]; i++)
+	for (i = 1; s[i]; i++)
 	{
 		/* Check if previous char is a seperator */
 		c = s[i - 1];
