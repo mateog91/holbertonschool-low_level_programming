@@ -10,9 +10,6 @@
  * Letters o and O should be replaced by 0
  * Letters t and T should be replaced by 7
  * Letters l and L should be replaced by 1
- * Restriction:
- * Only one if statement in code and no ternary operations
- * Only two loops and No use of switch
  *
  * Return: Pointer to input string.
  */
