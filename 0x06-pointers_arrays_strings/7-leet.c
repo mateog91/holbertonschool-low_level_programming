@@ -18,18 +18,15 @@
 
 char *leet(char *s)
 {
-	char c;
 	int i, j;
 	char numbers[] = "43071";
 	char letters[] = "aAeEoOtTlL";
 
-	for (i = 0; s[i]; i++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		c = s[i];
-
-		for (j = 0; letters[j]; j++)
+		for (j = 0; letters[j] != '\0'; j++)
 		{
-			if (c == letters[j])
+			if (s[i] == letters[j])
 			{
 				s[i] = numbers[j / 2];
 			}
