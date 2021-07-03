@@ -18,9 +18,9 @@
 
 char *leet(char *s)
 {
-	int i, j;
 	char numbers[] = "4433007711";
 	char letters[] = "aAeEoOtTlL";
+	int i, j;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
@@ -33,6 +33,5 @@ char *leet(char *s)
 		}
 
 	}
-
 	return (s);
 }
