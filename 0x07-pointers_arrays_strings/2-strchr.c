@@ -22,6 +22,9 @@ char *_strchr(char *s, char c)
 		i++;
 	}
 
+	if (s[i] == c)
+		return (&s[i]);
+
 	/* Return NULL if did not found the char 'c' in string */
 	return (ptr);
 }
