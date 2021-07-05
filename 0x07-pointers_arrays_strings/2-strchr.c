@@ -9,6 +9,7 @@
 char *_strchr(char *s, char c)
 {
 	int i = 0;
+	char *ptr = 0;
 
 	/* Go through input string*/
 	while (s[i])
@@ -22,5 +23,5 @@ char *_strchr(char *s, char c)
 	}
 
 	/* Return NULL if did not found the char 'c' in string */
-	return (0);
+	return (ptr);
 }
