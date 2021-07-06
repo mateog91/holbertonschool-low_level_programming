@@ -1,3 +1,5 @@
+#include <stddef.h>
+
 /**
  * _strstr - finds needle in hay
  * @haystack: is the hay
@@ -37,5 +39,5 @@ char *_strstr(char *haystack, char *needle)
 	}
 
 	/* Did not find a match, return Null */
-	return (0);
+	return (NULL);
 }
