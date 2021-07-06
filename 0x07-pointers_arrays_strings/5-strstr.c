@@ -1,4 +1,9 @@
 /**
+ * _strstr - finds needle in hay
+ * @haystack: is the hay
+ * @needle: is the needle
+ *
+ * Return: pointer to needle in hay or NULL if none.
  */
 char *_strstr(char *haystack, char *needle)
 {
