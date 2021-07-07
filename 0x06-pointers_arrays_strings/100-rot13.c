@@ -6,6 +6,8 @@
  */
 char *rot13(char *s)
 {
+	int i;
+	
 	for (i = 0; s[i]; i++)
 	{
 		s[i] = s[i] + 13;
