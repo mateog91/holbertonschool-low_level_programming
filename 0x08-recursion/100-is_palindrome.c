@@ -1,4 +1,5 @@
 int _palindrome2(char *s, int size);
+int _strlen_recursion(char *s);
 
 /**
  * is_palindrome - Function that checks if palindrome
@@ -6,19 +7,22 @@ int _palindrome2(char *s, int size);
  *
  * Return: 1 if palindrome, 0 if not.
  */
-
 int is_palindrome(char *s)
 {
 	int size;
 
 	/* Find length of string */
-	for (size = 0; s[size] != '\0'; size++)
-	{
-	}
+	size = _strlen_recursion(s);
 
 	return (_palindrome2(s, size));
 }
-
+/**
+ * _palindrome2 - Function that finds if string is palindrome
+ * @s: Input string
+ * @size: Size of string
+ *
+ * Return: If palindrome return 1, if not return 0.
+ */
 int _palindrome2(char *s, int size)
 {
 	/* Base Cases */
@@ -32,3 +36,22 @@ int _palindrome2(char *s, int size)
 	/* Recursive Case */
 	return (_palindrome2(s + 1, size - 2));
 }
+
+/**
+ * _strlen_recursion - function that returns the length of a string.
+ * @s: pointer to input string.
+ * Description:
+ * Finds the length of the string pointed by @s
+ *
+ * Return: Interger with length of string which @s points to.
+*/
+int _strlen_recursion(char *s)
+{
+	/* Base case */
+	if (*s == '\0')
+		return (0);
+
+	/* Recursive case */
+	return (1 + _strlen_recursion(s + 1));
+}
+
