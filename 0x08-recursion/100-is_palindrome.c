@@ -15,7 +15,7 @@ int is_palindrome(char *s)
 	for (size = 0; s[size] != '\0'; size++)
 	{
 	}
-	
+
 	return (_palindrome2(s, size));
 }
 
@@ -28,8 +28,7 @@ int _palindrome2(char *s, int size)
 		return (1);
 	else if (size == 1)
 		return (1);
-	else
-		/* Recursive Case */
-		return _palindrome2(s + 1, size - 2);
+
+	/* Recursive Case */
+	return (_palindrome2(s + 1, size - 2));
 }
-	
