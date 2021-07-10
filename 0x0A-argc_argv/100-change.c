@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 {
 	int coins = 0, change;
 
-	change = atoi(argv[0]);
+	change = atoi(argv[1]);
 
 	if (argc != 3)
 	{
