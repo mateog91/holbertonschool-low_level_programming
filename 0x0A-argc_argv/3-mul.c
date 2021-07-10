@@ -15,7 +15,7 @@
 int main(int argc, char *argv[])
 {
 	int result;
-	
+
 
 	/* Checks if exactly 2 arguments (3 with file name) were recived */
 	if (argc != 3)
