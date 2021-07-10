@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int _isdigit(int c);
-
 /**
  * main - prints the minimum number of coints to make a change for an amount
  * @argc: number of inputs
@@ -17,11 +15,10 @@ int main(int argc, char *argv[])
 
 	change = atoi(argv[1]);
 
-	if (argc != 3)
+	if (argc != 2)
 	{
 		printf("Error");
 		return (1);
-	}
 	}
 	while (change > 0)
 	{
