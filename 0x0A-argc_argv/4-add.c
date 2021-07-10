@@ -15,7 +15,7 @@ int _isdigit(int c);
  */
 int main(int argc, char *argv[])
 {
-	int sum = 0, i, check;
+	int sum = 0, i, j, check;
 
 	if (argc == 0)
 	{
@@ -25,14 +25,16 @@ int main(int argc, char *argv[])
 
 	for (i = 1; i < argc; i++)
 	{
-		check = _isdigit(*argv[i]);
-		/* printf("check: %i\n", check);*/
-		if (check == 0 || atoi(argv[i]) < 0)
+		for (j = 0; argv[i][j] != '\0'; j++)
 		{
-			printf("Error\n");
-			return (1);
+			check = _isdigit(argv[i][j]);
+			/* printf("check: %i\n", check);*/
+			if (check == 0)
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
-
 		/*printf("argv[%d] = %s\n", i, argv[i]);*/
 		sum += atoi(argv[i]);
 	}
