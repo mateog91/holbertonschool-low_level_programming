@@ -27,11 +27,12 @@ int main(int argc, char *argv[])
 	{
 		check = _isdigit(*argv[i]);
 		/* printf("check: %i\n", check);*/
-		if (check == 0)
+		if (check == 0 || atoi(argv[i]) < 0)
 		{
 			printf("Error\n");
 			return (1);
 		}
+
 		/*printf("argv[%d] = %s\n", i, argv[i]);*/
 		sum += atoi(argv[i]);
 	}
