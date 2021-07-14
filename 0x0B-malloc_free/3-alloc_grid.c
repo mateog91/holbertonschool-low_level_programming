@@ -24,13 +24,14 @@ int **alloc_grid(int width, int height)
 	ptr = (int **) malloc(sizeof(int *) * width);
 	if (ptr == NULL)
 		return (NULL);
-	/* Allocating for the actual array
+	/*
+	 *  Allocating for the actual array
 	 * for each row (i) it allocates @height number of slots of memory
 	 * and store the address in the ptr + i location of double pointer
 	 */
 	for (i = 0; i < width; i++)
 	{
-		*(ptr + i) = (int *) malloc(sizeof(int) * height);
+		*(ptr + i) = (int *) malloc(sizeof(int *) * height);
 		if (*(ptr + i) == NULL)
 		{
 			free(ptr);
@@ -42,7 +43,7 @@ int **alloc_grid(int width, int height)
 	{
 		for (j = 0; j < height; j++)
 		{
-			*(*(ptr + i) + j) = 0;
+			ptr[i][j] = 0;
 		}
 	}
 	return (ptr);
