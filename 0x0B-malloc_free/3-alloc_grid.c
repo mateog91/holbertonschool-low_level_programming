@@ -21,7 +21,7 @@ int **alloc_grid(int width, int height)
 		return (NULL);
 
 	/*Allocting for double pointer w holds addresses of each row*/
-	ptr = (int **) malloc(sizeof(int *) * width);
+	ptr = (int **) malloc(sizeof(int *) * height);
 	if (ptr == NULL)
 		return (NULL);
 	/*
@@ -29,9 +29,9 @@ int **alloc_grid(int width, int height)
 	 * for each row (i) it allocates @height number of slots of memory
 	 * and store the address in the ptr + i location of double pointer
 	 */
-	for (i = 0; i < width; i++)
+	for (i = 0; i < height; i++)
 	{
-		*(ptr + i) = (int *) malloc(sizeof(int *) * height);
+		*(ptr + i) = (int *) malloc(sizeof(int *) * width);
 		if (*(ptr + i) == NULL)
 		{
 			free(ptr);
@@ -39,9 +39,9 @@ int **alloc_grid(int width, int height)
 		}
 	}
 
-	for (i = 0; i < width; i++)
+	for (i = 0; i < height; i++)
 	{
-		for (j = 0; j < height; j++)
+		for (j = 0; j < width; j++)
 		{
 			ptr[i][j] = 0;
 		}
