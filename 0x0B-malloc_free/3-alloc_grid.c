@@ -16,24 +16,16 @@ int **alloc_grid(int width, int height)
 	int i, j;
 	int **ptr;
 
-	/* Check if inputs are 0 or negatives */
 	if (width <= 0 || height <= 0)
 		return (NULL);
 
-	/*Allocting for double pointer w holds addresses of each row*/
 	ptr = (int **) malloc(sizeof(int *) * height);
 	if (ptr == NULL)
 		return (NULL);
-	/*
-	 *  Allocating for the actual array
-	 * for each row (i) it allocates @height number of slots of memory
-	 * and store the address in the ptr + i location of double pointer
-	 */
 	for (i = 0; i < height; i++)
 	{
 		*(ptr + i) = (int *) malloc(sizeof(int) * width);
 
-		/* if fails, free memory */
 		if (*(ptr + i) == NULL)
 		{
 			for (; i >= 0; i--)
