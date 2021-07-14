@@ -31,7 +31,7 @@ char *_strdup(char *str)
 	}
 
 	/* Allocate memory for new string */
-	ptr = malloc(sizeof(*str) * size);
+	ptr = malloc(sizeof(*str) * size + 1);
 	if (ptr == NULL)
 		return (NULL);
 
