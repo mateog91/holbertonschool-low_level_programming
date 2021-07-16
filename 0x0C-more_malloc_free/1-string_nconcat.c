@@ -35,6 +35,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 	}
 	length2 = i;
+	if (n > length2)
+		n = length2;
 
 	/*Sums total length, + 1 for the null value at the end of the concatenation*/
 	total_length = length1 + length2 + 1;
