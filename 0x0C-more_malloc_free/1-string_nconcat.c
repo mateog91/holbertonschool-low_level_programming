@@ -39,7 +39,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		n = length2;
 
 	/*Sums total length, + 1 for the null value at the end of the concatenation*/
-	total_length = length1 + length2 + 1;
+	total_length = length1 + n + 1;
 	/*Allocates memory for new space for the concatenation and checks if fails*/
 	ptr = (char *)malloc(sizeof(char) * total_length);
 	if (ptr == NULL)
