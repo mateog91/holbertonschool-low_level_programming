@@ -39,21 +39,21 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		n = length2;
 
 	/*Sums total length, + 1 for the null value at the end of the concatenation*/
-	total_length = length1 + n + 1;
+	total_length = length1 + n;
 	/*Allocates memory for new space for the concatenation and checks if fails*/
-	ptr = (char *)malloc(sizeof(char) * total_length);
+	ptr = (char *)malloc(sizeof(char) * (total_length + 1));
 	if (ptr == NULL)
 	{
 		free(ptr);
 		return (NULL);
 	}
-	for (i = 0; i < length1; i++)
+
+	for (i = 0; i < total_length; i++)
 	{
-		ptr[i] = s1[i];
-	}
-	for (i = 0; i <= n; i++)
-	{
-		ptr[i + length1] = s2[i];
+		if (i < length1)
+			ptr[i] = s1[i];
+		else
+			ptr[i] = s2[i - length1];
 	}
 	ptr[total_length] = '\0';
 	return (ptr);
