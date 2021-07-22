@@ -21,14 +21,19 @@
  */
 int main(int argc, char *argv[])
 {
-	int first = atoi(argv[1]), second = atoi(argv[3]), result;
+	int first, second, result;
 	char *s = argv[2];
+
 
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
+
+	first = atoi(argv[1]);
+	second = atoi(argv[3]);
+
 	if (second == 0 && (*s == '/' || *s == '%'))
 	{
 		printf("Error\n");
