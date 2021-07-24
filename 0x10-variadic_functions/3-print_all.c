@@ -1,9 +1,48 @@
 #include "variadic_functions.h"
 
-void printchar(va_list list);
-void printint(va_list list);
-void printfloat(va_list list);
-void printstr(va_list list);
+/**
+ * printchar - prints a char
+ * @list: list with elements to print
+ */
+void printchar(va_list list)
+{
+	printf("%c", va_arg(list, int));
+}
+
+/**
+ * printint - prints a interger
+ * @list: list with elements to print
+ */
+void printint(va_list list)
+{
+	printf("%d", va_arg(list, int));
+}
+
+/**
+ * printfloat - prints a float
+ * @list: list with elements to print
+ */
+void printfloat(va_list list)
+{
+	printf("%f", va_arg(list, double));
+}
+
+/**
+ * printstr - prints a string
+ * @list: list with elements to print
+ */
+void printstr(va_list list)
+{
+	char *string;
+
+	string = va_arg(list, char*);
+	if (string == NULL)
+	{
+		printf("(nil)");
+		return;
+	}
+	printf("%s", string);
+}
 /**
  * print_all - function that prints anything
  * @format: string with format of each passed variable to print
@@ -51,46 +90,3 @@ void print_all(const char * const format, ...)
 	printf("\n");
 }
 
-/**
- * printchar - prints a char
- * @list: list with elements to print
- */
-void printchar(va_list list)
-{
-	printf("%c", va_arg(list, int));
-}
-
-/**
- * printint - prints a interger
- * @list: list with elements to print
- */
-void printint(va_list list)
-{
-	printf("%d", va_arg(list, int));
-}
-
-/**
- * printfloat - prints a float
- * @list: list with elements to print
- */
-void printfloat(va_list list)
-{
-	printf("%f", va_arg(list, double));
-}
-
-/**
- * printstr - prints a string
- * @list: list with elements to print
- */
-void printstr(va_list list)
-{
-	char *string;
-
-	string = va_arg(list, char*);
-	if (string == NULL)
-	{
-		printf("(nil)");
-		return;
-	}
-	printf("%s", string);
-}
