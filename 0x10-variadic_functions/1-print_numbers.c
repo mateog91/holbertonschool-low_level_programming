@@ -11,7 +11,7 @@
  * If separator is NULL, dont print it
  * Prints a new line at hte end of the function
  *
- * Return: Nothing 
+ * Return: Nothing
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
@@ -20,12 +20,12 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	unsigned int i;
 
 	/* initialize the argument list */
-	va_start (number_list, n);
+	va_start(number_list, n);
 
 	/* go through all passed optional parameters */
 	for (i = 0; i < n; i++)
 	{
-		printf("%i", va_arg (number_list, int));
+		printf("%i", va_arg(number_list, int));
 		if ((i < (n - 1)) && (separator != NULL))
 			printf("%s", separator);
 	}
