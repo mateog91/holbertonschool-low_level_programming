@@ -10,12 +10,12 @@ list_t *add_node_end(list_t **head, const char *str)
 {
 	int i;
 
-	/* Create structure variables */
-	list_t last_node;
-	list_t new_node;
+	/* Create Pointer structure variables */
+	list_t *last_node;
+	list_t *new_node;
 	/* Allocate node */
 	new_node = malloc(sizeof(list_t));
-	if (new_code == NULL)
+	if (new_node == NULL)
 		return (NULL);
 	/* Put in the data */
 	/* Put in the string */
@@ -30,7 +30,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	/*If list is empty then make new node as head*/
 	if (*head == NULL)
 	{
-		*head->next = new_node;
+		*head = new_node;
 		return (new_node);
 	}
 	/*If not empty list, find last node of list */
