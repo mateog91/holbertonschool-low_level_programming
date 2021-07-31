@@ -3,7 +3,7 @@
  * free_list - frees lists
  * header: pointer to header
  */
-void free_list(list_t *head);
+void free_list(list_t *head)
 {
 	if (head == NULL)
 		return;
