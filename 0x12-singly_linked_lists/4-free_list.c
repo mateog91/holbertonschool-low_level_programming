@@ -1,3 +1,4 @@
+#include "lists.h"
 /**
  * free_list - frees lists
  * header: pointer to header
