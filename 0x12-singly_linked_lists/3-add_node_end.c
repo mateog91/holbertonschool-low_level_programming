@@ -18,11 +18,11 @@ list_t *add_node_end(list_t **head, const char *str)
 	if (new_node == NULL)
 		return (NULL);
 	/* Put in the data */
-	/* Put in the string */
-	new_node->str = strdup(str);
 	/* Calculate length of str */
 	for (i = 0; str[i]; i++)
 		;
+	/* Put in the string */
+	new_node->str = strdup(str);
 	/* Put in the legth of str in len */
 	new_node->len = i;
 	/* Adding in last node, make next node empty */
@@ -34,12 +34,12 @@ list_t *add_node_end(list_t **head, const char *str)
 		return (new_node);
 	}
 	/*If not empty list, find last node of list */
+	last_node = *head;
 	while (last_node->next != NULL)
 	{
 		last_node = last_node->next;
 	}
 	/* Last node points to the new node */
 	last_node->next = new_node;
-
 	return (new_node);
 }
