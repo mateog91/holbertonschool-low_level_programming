@@ -33,7 +33,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	new_dog->name = _strcpy(new_dog->name, name);
 
-	for (size = 0; name[size] != '\0'; size++)
+	for (size = 0; owner[size] != '\0'; size++)
 		;
 	size++;
 
