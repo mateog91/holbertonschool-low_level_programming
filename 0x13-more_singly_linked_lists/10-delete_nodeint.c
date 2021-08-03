@@ -4,7 +4,7 @@ int pop_listint(listint_t **head);
 
 /**
  * delete_nodeint_at_index - unction that deletes the node at index index of a
- * listint_t linked list.
+ * listint_t linked list. 
  * @head: Double pointer to first element of the list
  * @index: Number of node to delete
  *
@@ -16,16 +16,30 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	int pIndex;
 	listint_t *previous;
 	listint_t *current;
+	
+	if (*head == NULL)
+		return (-1);
+
+	if (index == 0)
+	{
+		current = *head;
+		if (current->next == NULL)
+			*head = NULL;
+		else
+			*head = (current->next);
+		free(current);
+		return (1);
+	}
 
 	pIndex = index - 1;
 	previous = get_nodeint_at_index(*head, pIndex);
 	if (previous == NULL)
 		return (-1);
 
-	current = previous->next;
-	previous->next = current->next;
-	free(current);
-	return (1);
+	current = (previous->next)->next;
+	free(previous->next);
+	previous->next = current;
+	return (-1);
 }
 
 /**
