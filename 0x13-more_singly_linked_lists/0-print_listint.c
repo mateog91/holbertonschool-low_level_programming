@@ -9,14 +9,11 @@
 size_t print_listint(const listint_t *h)
 {
 
-	/* Print current int */
-	printf("%i\n", h->n);
-
 	/* base cases */
 	if (h == NULL)
 		return (0);
-	if (h->next == NULL)
-		return (1);
+	/* Print current int */
+	printf("%i\n", h->n);
 
 	/* Recursive case */
 	return (1 + print_listint(h->next));
