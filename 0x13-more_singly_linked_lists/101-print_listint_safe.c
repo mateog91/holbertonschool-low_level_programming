@@ -16,5 +16,5 @@ size_t print_listint_safe(const listint_t *head);
 	printf("%i\n", head->n);
 
 	/* Recursive case */
-	return (1 + print_listint(head->next));
+	return (1 + print_listint_safe(head->next));
 }
