@@ -9,7 +9,8 @@
 size_t print_listint_safe(const listint_t *head)
 {
 	size_t count = 1;
-	const listint_t *loopNode, *current = head, *slow = head, *fast = head;
+	const listint_t *current = head, *slow = head, *fast = head;
+
 	if (head == NULL)
 		return (0);
 	if (head->next == NULL)
@@ -35,8 +36,6 @@ size_t print_listint_safe(const listint_t *head)
 			fast = fast->next;
 		}
 	}
-	else
-		loopNode = NULL;
 	while (current != NULL)
 	{
 		if (current == fast)
