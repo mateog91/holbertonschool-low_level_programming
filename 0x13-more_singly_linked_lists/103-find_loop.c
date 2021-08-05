@@ -29,7 +29,7 @@ listint_t *find_listint_loop(listint_t *head)
 		fast = fast->next->next;
 	}
 	/* If loop exists*/
-	if (slow == next)
+	if (slow == fast)
 	{
 		/* move slow to head and advance 1 each until their next meet */
 		/* at that node is where the loop starts */
@@ -39,7 +39,7 @@ listint_t *find_listint_loop(listint_t *head)
 			slow = slow->next;
 			fast = fast->next;
 		}
-		return (slow->next);
+		return (fast);
 	}
 	/* If no loop was found return NULL */
 	return (NULL);
