@@ -16,7 +16,7 @@ size_t print_listint_safe(const listint_t *head)
 	if (head->next == NULL)
 	{
 		printf("%i\n", head->n);
-		return (count);
+		return (++count);
 	}
 	slow = slow->next;
 	fast = fast->next->next;
@@ -41,7 +41,7 @@ size_t print_listint_safe(const listint_t *head)
 		if (current == fast)
 		{
 			printf("%i\n", current->n);
-			return (count++);
+			return (++count);
 		}
 		printf("%i\n", current->n);
 		current = current->next;
