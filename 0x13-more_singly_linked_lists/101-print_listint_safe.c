@@ -41,7 +41,7 @@ size_t print_listint_safe(const listint_t *head)
 		if (current == fast)
 		{
 			printf("%i\n", current->n);
-			return (count);
+			return (++count);
 		}
 		printf("%i\n", current->n);
 		current = current->next;
