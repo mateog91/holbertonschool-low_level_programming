@@ -7,8 +7,8 @@
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
+	/*
 	int count = 0, i = (sizeof(n) * 8 - 1);
-
 	for (; i >= 0; i--)
 	{
 		if ((((m ^ n) >> i) & 1)  == 1)
@@ -16,4 +16,11 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	}
 
 	return (count);
+	*/
+
+
+	if (n > 1)
+		return (((m ^ n) & 1) + flip_bits (n >> 1, m >> 1));
+
+	return (m ^ n);
 }
