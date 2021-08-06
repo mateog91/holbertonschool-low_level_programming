@@ -1,8 +1,9 @@
 #include "main.h"
+
 /**
  * get_bit - function that prints the binary representation of a number.
  * @n: Input bit
- * @index:i s the index, starting from 0 of the bit you want to get 
+ * @index:i s the index, starting from 0 of the bit you want to get
  *
  * Description:
  *
@@ -17,7 +18,7 @@ int get_bit(unsigned long int n, unsigned int index)
 		return (get_bit(n >> 1, index - 1));
 	/* Base Case */
 	if (index == 0)
-      		return (n & 1);
+		return (n & 1);
 	return (-1);
 
 }
