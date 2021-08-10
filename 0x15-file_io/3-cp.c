@@ -1,15 +1,15 @@
 #include "main.h"
 /**
  * main - copy a from one file to another
- * @argc = number of arguments
- * @argv = name of files
+ * @argc: number of arguments
+ * @argv: array of pointers with name of files
  *
- * Return:
+ * Return: 0 if success
  */
 int main(int argc, char *argv[])
 {
 	int lecture, writting, fileFrom, fileTo, closeFF, closeFT;
-	char *buffer = malloc(sizeof(char) * 1024);
+	char buffer[1024];
 
 	if (argc != 3)
 	{
