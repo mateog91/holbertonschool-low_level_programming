@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 	while ((lecture = read(fileFrom, buffer, 1024)) > 0)
 	{
 		writting = write(fileTo, buffer, lecture);
-		if (writting == -1)
+		if (writting == -1 || lecture != writting)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			exit(99); } }
