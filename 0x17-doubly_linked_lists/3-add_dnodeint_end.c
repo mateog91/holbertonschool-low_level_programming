@@ -13,11 +13,9 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 	if (head == NULL)
 		return (NULL);
 
-	printf("llego aqui");
 	new = malloc(sizeof(dlistint_t));
 	if (new == NULL)
 	{
-		dprintf(2, "Error: Can't malloc\n");
 		return (NULL);
 	}
 
