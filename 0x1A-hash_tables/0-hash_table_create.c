@@ -14,11 +14,15 @@ hash_table_t *hash_table_create(unsigned long int size)
 	hash_table_t *new_ht = malloc(sizeof(hash_table_t) * 1);
 	unsigned long int i;
 
-	if (size <= 0)
-		return (NULL);
-
+	/* Check if malloc new_ht fails */
 	if (new_ht == NULL)
+	{
+		free(new_ht);
 		return (NULL);
+	}
+
+	/* Assign size to new_ht*/
+	new_ht->size = size;
 
 	/* Alocate Table */
 	new_ht->array = malloc(sizeof(hash_node_t *) * size);
