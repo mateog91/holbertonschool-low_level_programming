@@ -22,6 +22,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	current = ht->array[index];
 
 	while (current != NULL)
+	{
 		/* search if key is in bucket*/
 		if (strcmp(current->key, key) == 0)
 		{
@@ -32,6 +33,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 				return (0);
 			return (1);
 		}
+	}
 	/* Bucket is empty or does not have key, add node*/
 	if (current == NULL)
 	{
