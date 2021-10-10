@@ -44,6 +44,15 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	return (0);
 }
 
+/**
+ * add_node - adds new node at the begining of bucketlist
+ * 
+ * @head: First element of bucket list
+ * @key: key to check if exists or add
+ * @value: value to add or replace
+ * 
+ * Return: pointer to new node
+ */
 hash_node_t *add_node(hash_node_t **head, const char *key, const char *value)
 {
 	hash_node_t *new_node = malloc(sizeof(hash_node_t));
