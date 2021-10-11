@@ -19,7 +19,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 
 	index = key_index((unsigned char *)key, ht->size);
-	current = ht->array[index];
+	bucket = ht->array[index];
+	current = bucket;
 
 	while (current != NULL)
 	{
@@ -36,15 +37,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		current = current->next;
 	}
 	/* Bucket is empty or does not have key, add node*/
-	if (current == NULL)
-	{
-		new = add_node(&bucket, key, value);
-		if (new == NULL)
-			return (0);
-		return (1);
-	}
-	printf("something went wrong");
-	return (0);
+
+	new = add_node(&bucket, key, value);
+	if (new == NULL)
+		return (0);
+	return (1);
 }
 
 /**
