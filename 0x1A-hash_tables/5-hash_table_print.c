@@ -10,21 +10,16 @@ void hash_table_print(const hash_table_t *ht)
 {
 	unsigned long int i;
 	hash_node_t *current;
-	int flag = 0;
+	unsigned int flag = 0;
 
 	if (ht == NULL)
 		return;
-
 	printf("{");
-
-	/* Go throuh each index of array*/
 	for (i = 0; i < ht->size; i++)
 	{
-		/* Go through each element of bucket list*/
 		current = ht->array[i];
 		while (current != NULL)
 		{
-			/* Print each element */
 			if (flag == 1)
 				printf(", ");
 			printf("'%s' : '%s'", current->key, current->value);
