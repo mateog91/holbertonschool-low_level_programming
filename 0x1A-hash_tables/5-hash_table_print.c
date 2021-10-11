@@ -5,15 +5,14 @@
  *
  * Return: Nothing
  */
-
 void hash_table_print(const hash_table_t *ht)
 {
 	unsigned long int i;
 	hash_node_t *current;
-	unsigned int flag = 0;
+	int flag = 0;
 
 	if (ht == NULL)
-		return;
+        return;
 	printf("{");
 	for (i = 0; i < ht->size; i++)
 	{
@@ -22,7 +21,7 @@ void hash_table_print(const hash_table_t *ht)
 		{
 			if (flag == 1)
 				printf(", ");
-			printf("'%s' : '%s'", current->key, current->value);
+			printf("'%s': '%s'", current->key, current->value);
 			current = current->next;
 			flag = 1;
 		}
