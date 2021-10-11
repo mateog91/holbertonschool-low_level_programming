@@ -60,22 +60,8 @@ hash_node_t *add_node(hash_node_t **head, const char *key, const char *value)
 		return (NULL);
 
 	new_node->key = strdup(key);
-	if (new_node->key == NULL)
-	{
-		free(new_node);
-		return (NULL);
-	}
-
 	new_node->value = strdup(value);
-	if (new_node->value == NULL)
-	{
-		free(new_node->key);
-		free(new_node);
-		return (NULL);
-	}
-
 	new_node->next = (*head);
 	(*head) = new_node;
-
 	return (new_node);
 }
