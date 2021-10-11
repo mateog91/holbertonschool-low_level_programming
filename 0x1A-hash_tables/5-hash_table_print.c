@@ -1,15 +1,16 @@
 #include "hash_tables.h"
 /**
- * hash_table_print - prints a hash table
- * @ht: The hash table
+ * hash_table_print - prints a hash table.
+ * @ht: hash table.
  *
  * Return: Nothing
  */
+
 void hash_table_print(const hash_table_t *ht)
 {
 	unsigned long int i;
-	int flag = 0;
 	hash_node_t *current;
+	unsigned int flag = 0;
 
 	if (ht == NULL)
 		return;
@@ -21,7 +22,7 @@ void hash_table_print(const hash_table_t *ht)
 		{
 			if (flag == 1)
 				printf(", ");
-			printf("'%s': '%s'", current->key, current->value);
+			printf("'%s' : '%s'", current->key, current->value);
 			current = current->next;
 			flag = 1;
 		}
