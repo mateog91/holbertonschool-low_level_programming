@@ -1,9 +1,8 @@
 # archivo
 CC = gcc
 SRC = main.c school.c
-OBJ = $(SRC:%.c=%.o)
+OBJ = main.o school.o
 NAME = school
 
 all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
-
