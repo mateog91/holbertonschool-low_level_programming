@@ -19,7 +19,7 @@ def island_perimeter(grid):
     i = 0
     while i < grid_height:
         if 1 in grid[i]:
-            if i_min == -1:
+            if i_min == -1 or i < j_min:
                 i_min = i
             if i > i_max:
                 i_max = i
