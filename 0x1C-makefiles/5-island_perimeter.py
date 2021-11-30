@@ -27,7 +27,7 @@ def island_perimeter(grid):
         while j < grid_width:
             current = grid[i][j]
             if current == 1:
-                if j_min == -1:
+                if j_min == -1 or j < j_min:
                     j_min = j
                 if j > j_max:
                     j_max = j
@@ -41,3 +41,13 @@ def island_perimeter(grid):
     width = j_max + 1 - j_min
     perimeter = (width + height) * 2
     return perimeter
+
+
+grid = [
+    [0, 0, 0, 0, 0, 0],
+    [0, 1, 1, 0, 0, 0],
+    [1, 1, 1, 0, 0, 0],
+    [0, 1, 1, 1, 0, 0],
+    [0, 0, 0, 1, 1, 1]
+]
+print(island_perimeter(grid))
