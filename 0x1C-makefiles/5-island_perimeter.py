@@ -48,34 +48,4 @@ def island_perimeter(grid):
                     perimeter += 1
             j += 1
         i += 1
-
-    # height = i_max + 1 - i_min
-    # width = j_max + 1 - j_min
-    # perimeter = width * 2 + height * 2
     return perimeter
-
-
-grid1 = [
-    [0, 0, 0, 0, 0, 0],
-    [0, 1, 1, 0, 0, 0],
-    [1, 1, 1, 0, 0, 0],
-    [0, 1, 1, 1, 0, 0],
-    [0, 0, 0, 1, 1, 1]
-]
-
-grid2 = [
-    [0, 0, 0, 0, 0, 0],
-    [0, 1, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0]
-]
-
-grid3 = [
-    [0, 1, 0, 0, 0, 1],
-    [1, 1, 0, 0, 0, 1],
-    [1, 1, 0, 1, 1, 1],
-    [0, 1, 1, 1, 0, 0],
-    [0, 0, 1, 1, 0, 0]
-]
-print(island_perimeter(grid1))
-print(island_perimeter(grid2))
-print(island_perimeter(grid3))
