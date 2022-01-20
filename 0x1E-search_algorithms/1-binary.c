@@ -43,7 +43,7 @@ int binary_search(int *array, size_t size, int value)
 }
 
 /**
- * @print_array - prints an array according to the format
+ * print_array - prints an array according to the format
  *
  * @array: pointer to the array
  * @l: starting index to print
@@ -53,6 +53,7 @@ int binary_search(int *array, size_t size, int value)
 void print_array(int *array, size_t l, size_t r)
 {
 	size_t i;
+
 	printf("Searching in array:");
 
 	for (i = l; i <= r; i++)
